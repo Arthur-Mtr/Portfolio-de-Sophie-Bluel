@@ -35,6 +35,7 @@ export function afficherCategories(categories) {
     const buttonTous = document.createElement("button");
     buttonTous.textContent = "Tous"
     buttonTous.dataset.id = "Tous"
+    buttonTous.classList.add("active")
         filtresDiv.appendChild(buttonTous);
 
     for(let i = 0; i < categories.length; i++) {

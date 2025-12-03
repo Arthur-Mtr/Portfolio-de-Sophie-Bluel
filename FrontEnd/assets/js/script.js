@@ -13,11 +13,23 @@ affichageTravaux(travaux);
 
 const boutons = document.querySelectorAll("button");
 
-for(let i = 0; i < boutons.length; i++) {
-    boutons[i].addEventListener("click", function() {
+
+for (const bouton of boutons) {
+    bouton.addEventListener("click", function() {
+
+        for(const b of boutons) {
+            b.classList.remove("active")
+        }
+        bouton.classList.add("active")
+
+        if (bouton.dataset.id === "Tous") {
+            affichageTravaux(travaux);
+        } 
+        else {
         const travauxFiltres = travaux.filter(function(x) {
-            return `${x.categoryId}` === boutons[i].dataset.id;
+            return `${x.categoryId}` === bouton.dataset.id;
         })
         affichageTravaux(travauxFiltres);
+        }
     })
 }

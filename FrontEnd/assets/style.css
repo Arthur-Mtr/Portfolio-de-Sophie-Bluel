@@ -150,6 +150,11 @@ li:hover {
 
 }
 
+.filtres button.active {
+	background-color: #1D6154;
+	color: #FFFFFF;
+}
+
 /*  */
 
 .gallery {
