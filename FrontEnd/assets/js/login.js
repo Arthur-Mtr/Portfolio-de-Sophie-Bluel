@@ -1,5 +1,5 @@
 
-const form = document.querySelector(".form-log");
+const form = document.querySelector(".form");
 const email = document.getElementById("e-mail");
 const mdp = document.getElementById("mdp");
 const messageErreur = document.querySelector(".message-erreur");
