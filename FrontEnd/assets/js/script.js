@@ -1,7 +1,7 @@
 import { recupererTravaux, } from "./api.js";
 import { recupererCategories, } from "./api.js";
 
-import { affichageTravaux, afficherCategories, affichageModeEdition, afficherModal, fermerModal, affichageTravauxModal } from "./fonctions.js";
+import { affichageTravaux, afficherCategories, affichageModeEdition, afficherModal, fermerModal, affichageTravauxModal, activerPoubelles, } from "./fonctions.js";
 
 
 const travaux = await recupererTravaux();
@@ -52,6 +52,7 @@ const overlay = document.querySelectorAll(".modal-overlay");
 btnModifier.addEventListener("click", function() {
     afficherModal(modal1);
     affichageTravauxModal(travaux);
+    activerPoubelles();
 });
 
 btnClose.forEach(function(btn) {
@@ -84,3 +85,7 @@ back.addEventListener("click", function() {
     fermerModal(modal2);
     afficherModal(modal1);
 })
+
+//        //
+
+console.log(token)

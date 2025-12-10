@@ -81,6 +81,7 @@ export function affichageTravauxModal(travaux) {
     for(let i = 0; i < travaux.length; i++) {
         const figure = document.createElement("figure")
         figure.classList.add("figure-modal")
+        figure.dataset.id = travaux[i].id
 
         const img = document.createElement("img")
         img.src = travaux[i].imageUrl
@@ -106,4 +107,25 @@ export function afficherModal(x){
 export function fermerModal(x) {
     x.style.display = "none";
     x.setAttribute("aria-hidden", "true");
+}
+
+
+// Activer les boutons //
+
+export function activerPoubelles() {
+const btnPoubelle = document.querySelectorAll(".icone-supprimer");
+const token = localStorage.getItem("token");
+
+    btnPoubelle.forEach(function(btn) {
+        btn.addEventListener("click", async function(event) {
+         const figure = event.target.closest("figure");
+            await fetch(`http://localhost:5678/api/works/${figure.dataset.id}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                 }
+            })
+
+        })
+    })
 }
