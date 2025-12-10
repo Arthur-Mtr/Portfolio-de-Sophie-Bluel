@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #FFFEF8;
 }
 ol, ul {
 	list-style: none;
@@ -53,7 +54,7 @@ body {
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
@@ -98,6 +99,16 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #B1663C;
+}
+
 #introduction {
 	display: flex;
 	align-items: center;
@@ -218,3 +229,291 @@ footer nav ul {
 	margin: 2em
 }
 
+/* ICI CE SERA LE STYLE DE LA PAGE LOG IN */
+
+.zone-log {
+	margin-top: 150px;
+}
+
+.zone-log h2 {
+	text-align: center;
+	padding-bottom: 37px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.form div {
+	display: flex;
+	flex-direction: column;
+}
+
+.form input {
+	width: 379px;
+	height: 51px;
+	border: none;
+	filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.09));
+}
+
+.form select {
+	width: 379px;
+	height: 51px;
+	border: none;
+	filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.09));
+	font-family: "work sans";
+}
+
+.form input:focus {
+	outline: none;
+}
+
+.btn-connect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: px;
+	gap: 28px;
+}
+
+.btn-connect button {
+	font-family: "syne";
+	border: none;
+	background-color: #1D6154;
+	color: #FFFFFF;
+	width: 179px;
+	height: 36px;
+	border-radius: 60px;
+}
+
+.btn-connect p {
+	text-decoration: underline;
+}
+
+.menu-bold {
+	font-weight: bold;
+}
+
+.message-erreur {
+	display: none;
+	color: red;
+}
+
+/* ICI CE SERA LE STYLE DU MODE EDITION */
+
+.bandeau-noir {
+	height: 59px;
+	background-color: black;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.mode-edition-titre {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+
+}
+
+.modif {
+	border: none;
+	background-color: #FFFEF8;
+    gap: 5px;
+    margin-top: 10px;
+    display: none;
+	cursor: pointer;
+}
+
+/* Création de la MODAL1 */
+
+.modal1 {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgb(0, 0, 0, 0.5);
+}
+
+.contenu-modal {
+	position: fixed;
+	background-color: white;
+	width: 630px;
+	height: 688px;
+	border-radius: 10px;
+	padding: 0 100px 20px 100px;
+	box-sizing: border-box;
+}
+
+.contenu-modal .bouton-close {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	background: none;
+	border: none;
+	font-size: 27px;
+	cursor: pointer;
+}
+
+.contenu-modal h2 {
+	margin: 50px 0 50px 0;
+	text-align: center;
+	font-size: 26px;
+	font-family: "work Sans";
+	font-weight: normal;
+	color: black;
+}
+
+.photo-travaux {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding-bottom: 90px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+.figure-modal {
+	position: relative;
+	width: calc((100% - 40px) / 5);
+}
+
+.figure-modal img {
+	width: 100%;
+	height: auto;
+}
+
+.icone-supprimer {
+	position: absolute;
+	left: 55px;
+	top: 5px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	width: 17px;
+	height: 17px;
+	font-size: 10px;
+	font-weight: lighter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	
+}
+
+.bouton-ajout {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.ajout-photo {
+	background-color: #1D6154;
+	border-radius: 60px;
+	border: none;
+	width: 237px;
+	height: 36px;
+	font-family: "syne";
+	color: white;
+	cursor: pointer;
+}
+
+/* Contenu de la MODAL2 */
+
+.modal2 {
+	position: fixed;
+	inset: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.upload-zone {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 420px;
+	height: 169px;
+	background-color: #E8F1F6;
+	border-radius: 3px;
+	gap: 10px;
+	box-sizing: border-box;
+}
+
+.upload-zone i {
+	width: 76px;
+	height: 76px;
+	font-size: 68px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #B9C5CC;
+	padding-top: 10px;
+
+}
+
+.ajouter-photo {
+	width: 173px;
+	height: 36px;
+	background: #CBD6DC;
+	border: none;
+	border-radius: 50px;
+	color: #306685;
+	font-family: "work sans";
+}
+
+.upload-zone p {
+	font-size: 10px;
+	font-family: "work sans";
+	color: #444444;
+}
+
+.form-modal2 {
+	padding-top: 20px;
+	padding-bottom: 60px;
+	gap: 20px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+.form-modal2 div {
+	gap: 10px;
+}
+
+.btn-validation {
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
+}
+
+.bouton-valider {
+	width: 237px;
+	height: 36px;
+	border: none;
+	border-radius: 60px;
+	background: #A7A7A7;
+	color: white;
+	font-size: 14px;
+	font-family: "syne";
+	
+}
+
+.bouton-back {
+	position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
